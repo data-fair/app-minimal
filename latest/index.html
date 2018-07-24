@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <!-- The next 3 elements are important metadatas. They will be used by data-fair when importing this application. -->
+    <title>Data-Fair - minimal</title>
+    <meta name="description" content="This is the smallest valid data-fair application. It is meant as a presentation of what an application should do to interact with a data-fair instance.">
+    <meta name="application-name" content="data-fair-minimal">
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Nunito">
+    <link rel="stylesheet" type="text/css" href="https://koumoul-dev.github.io/data-fair-minimal/latest/style.css">
+  </head>
+  <body>
+    <h1>Data-Fair - minimal</h1>
+    <p>This is the smallest valid data-fair application. It is meant as a presentation of what an application should do to interact with a data-fair instance.</p>
+    <p><a href="http://localhost:5600/applications?import=http%3A%2F%2F127.0.0.1%3A5880%2F">Configure this application in a data-fair instance.</a></p>
+    <br>
+    <h2>Actions</h2>
+    <div id="actions"></div>
+    <h2>Logs</h2>
+    <ul id="log"></ul>
+
+    <!-- jQuery and other small libraries for code clarity -->
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/js-cookie@2/src/js.cookie.min.js"></script>
+
+    <script>
+      // %DATA_FAIR_CONFIG% will be replaced by data-fair's reverse proxy with an object
+      // this replacement will only be done in HTML files, not external JS source code
+      // so you must use a script tag as this one
+      window.DATA_FAIR_CONFIG = JSON.parse('%DATA_FAIR_CONFIG%');
+    </script>
+
+    <script src="https://koumoul-dev.github.io/data-fair-minimal/latest/index.js"></script>
+  </body>
+</html>
