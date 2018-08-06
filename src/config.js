@@ -48,9 +48,9 @@
       for(var i = 0; i < datasets.length; i++) {
         select.append($('<option value="' + datasets[i].href + '">' + datasets[i].title + '(' + datasets[i].owner.name + ')</option>'));
       }
-      select.on('change', function(value) {
+      select.on('change', function() {
         var configuration = JSON.parse($('#config').val())
-        configuration.datasets = [{href: value, key: 'main'}]
+        configuration.datasets = [{href: select.val(), key: 'main'}]
         $('#config').val(JSON.stringify(configuration, null, 2))
       })
     })

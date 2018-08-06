@@ -46,11 +46,11 @@
     .then(function(application) {
       log('Fetched application definition: ' + JSON.stringify(application))
       if (application.userPermissions.indexOf('writeConfig') !== -1) {
-        log('The user has the permission to write the config of the application. We can show the config link.');
+        log('The user has the permission to write the config of the application. We can show the config link.', 'success');
         // The "/config" URL is a convention that must be respected for proper integration in data-fair.
         $('<a href="' + dataFairConfig.exposedUrl + '/config">edit configuration</a>').appendTo('#actions')
       } else {
-        log('The user does not have the permission to write the config of the application. We cannot show the config link.')
+        log('The user does not have the permission to write the config of the application. We cannot show the config link.', 'error')
       }
     }, errorCallback);
 })();
