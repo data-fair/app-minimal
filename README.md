@@ -6,12 +6,21 @@ It is intended for developpers that want to have a precise understanding of what
 
 For developpers looking for a modern development framework, [data-fair-charts](https://github.com/koumoul-dev/data-fair-charts) is a better example.
 
-## Run in a small web server
+## Development
+
+Run data-fair and dependencies in the background:
+
+    docker-compose pull
+    docker-compose up -d
+
+Run the application in a small web server then open it [here](http://localhost:5880).
 
     npm i -g http-server
-    http-server -p 5880 ./src
+    http-server -c-1 -p 5880 ./src
 
-## Publish to Github Pages
+## Deployment
+
+Publish to Github Pages
 
     cp -rf ./src ./dist
     sed -i 's;http://localhost:5880;https://koumoul-dev.github.io/data-fair-minimal/latest;g' dist/*

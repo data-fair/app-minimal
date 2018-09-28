@@ -13,22 +13,18 @@
   <body>
     <h1>Data-Fair - minimal</h1>
     <p>This is the smallest valid data-fair application. It is meant as a presentation of what an application should do to interact with a data-fair instance.</p>
-    <p><a href="http://localhost:5600/applications?import=http://localhost:5880">Configure this application in a data-fair instance.</a></p>
-    <br>
-    <h2>Actions</h2>
-    <div id="actions"></div>
+    <p><a href="http://localhost:8080/applications?import=http://localhost:5880">Configure this application in a data-fair instance.</a></p>
     <h2>Logs</h2>
     <ul id="log"></ul>
 
     <!-- jQuery and other small libraries for code clarity -->
     <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/js-cookie@2/src/js.cookie.min.js"></script>
 
     <script>
-      // %DATA_FAIR_CONFIG% will be replaced by data-fair's reverse proxy with an object
+      // %APPLICATION% will be replaced by data-fair's reverse proxy with an object
       // this replacement will only be done in HTML files, not external JS source code
       // so you must use a script tag as this one
-      window.DATA_FAIR_CONFIG = JSON.parse('%DATA_FAIR_CONFIG%');
+      window.APPLICATION = JSON.parse('%APPLICATION%');
     </script>
 
     <script src="http://localhost:5880/index.js"></script>
