@@ -1,0 +1,28 @@
+{
+  "name": "data-fair-minimal",
+  "version": "0.0.0",
+  "description": "This is the smallest valid data-fair application.",
+  "main": "index.js",
+  "scripts": {
+    "dev": "df-dev-server",
+    "dev-src": "http-server src --port=3000 --cors --silent"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/koumoul-dev/data-fair-minimal.git"
+  },
+  "keywords": [
+    "data-fair",
+    "application"
+  ],
+  "author": "Alban Mouton <alban.mouton@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/koumoul-dev/data-fair-minimal/issues"
+  },
+  "homepage": "https://github.com/koumoul-dev/data-fair-minimal#readme",
+  "devDependencies": {
+    "@koumoul/df-dev-server": "^0.1.12",
+    "http-server": "^0.12.0"
+  }
+}

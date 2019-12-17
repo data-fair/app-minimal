@@ -8,15 +8,9 @@ For developpers looking for a modern development framework, [data-fair-charts](h
 
 ## Development
 
-Run data-fair and dependencies in the background:
+Run the application in a small web server then open it [here](http://localhost:5888).
 
-    docker-compose pull
-    docker-compose up -d
-
-Run the application in a small web server then open it [here](http://localhost:5880).
-
-    npm i -g http-server
-    http-server -c-1 -p 5880 ./src
+    npm run dev
 
 ## Deployment
 

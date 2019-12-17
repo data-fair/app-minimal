@@ -1,0 +1,9 @@
+{
+  "datasets": [
+    {
+      "href": "https://koumoul.com/s/data-fair/api/v1/datasets/geo-rpls2017",
+      "title": "Répertoire des logements locatifs des bailleurs sociaux",
+      "page": "https://koumoul.com/s/data-fair/dataset/geo-rpls2017/description"
+    }
+  ]
+}
