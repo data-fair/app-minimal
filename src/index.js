@@ -1,9 +1,15 @@
 (function() {
   function log (msg, cls) {
-    $('<li class="' + (cls || 'info') + '">' + msg + '</li>').appendTo('#log')
+    $('<li class="' + (cls || 'info') + '">' + msg + '</li>').appendTo('#log');
   }
+
   function errorCallback(err) {
-    log(err.message || err.responseText || err.statusText || err, 'error');
+    var message = err.message || err.responseText || err.statusText || err || 'error'
+    log(message);
+    $.ajax({url: application.href + '/error',contentType: 'application/json', data: JSON.stringify({ message: message }), method: 'POST'})
+      .catch(function(error) {
+        log('Failed to transmit error to server')
+      })
   }
 
   var application = window.APPLICATION;
@@ -20,6 +26,12 @@
 
   $.ajax({url: application.configuration.datasets[0].href + '/lines?size=0', json: true})
     .then(function(data) {
-      log('Consumed the API of the configured dataset: ' + JSON.stringify(data))
+      log('Consumed the API of the configured dataset: ' + JSON.stringify(data));
+    }).catch(function(error) {
+      errorCallback(error);
     })
+
+  $('#trigger-error').on('click', function() {
+    errorCallback({message: "The application triggered an error"});
+  })
 })();
