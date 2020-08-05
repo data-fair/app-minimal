@@ -16,7 +16,9 @@ Run the application in a small web server then open it [here](http://localhost:5
 
 Publish to Github Pages
 
+    rm -rf dist
     cp -rf ./src ./dist
     sed -i 's;http://localhost:5880;https://koumoul-dev.github.io/data-fair-minimal/latest;g' dist/*
+    sed -i 's;http://localhost:3000;https://koumoul-dev.github.io/data-fair-minimal/latest;g' dist/*
     npm i -g @koumoul/gh-pages-multi
     gh-pages-multi deploy -s dist
