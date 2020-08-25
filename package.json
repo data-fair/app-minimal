@@ -22,7 +22,7 @@
   },
   "homepage": "https://github.com/koumoul-dev/data-fair-minimal#readme",
   "devDependencies": {
-    "@koumoul/df-dev-server": "^0.1.12",
+    "@koumoul/df-dev-server": "^0.4.0",
     "http-server": "^0.12.0"
   }
 }
