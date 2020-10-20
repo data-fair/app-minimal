@@ -18,6 +18,10 @@
           "page": {"type": "string"}
         }
       }]
+    },
+    "field1": {
+      "type": "string",
+      "readOnly": true
     }
   }
 }
