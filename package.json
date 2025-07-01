@@ -4,8 +4,9 @@
   "description": "This is the smallest valid data-fair application.",
   "main": "index.js",
   "scripts": {
-    "dev": "df-dev-server",
-    "dev-src": "http-server src --port=3000 --cors --silent"
+    "dev": "zellij --layout .zellij.kdl",
+    "dev-server": "df-dev-server",
+    "dev-app": "http-server src --port=3000 --cors --silent"
   },
   "repository": {
     "type": "git",
@@ -22,7 +23,7 @@
   },
   "homepage": "https://github.com/koumoul-dev/data-fair-minimal#readme",
   "devDependencies": {
-    "@data-fair/dev-server": "^1.3.0",
-    "http-server": "^0.12.0"
+    "@data-fair/dev-server": "^2.0.5",
+    "http-server": "^14.1.1"
   }
 }

@@ -1,9 +1,327 @@
 {
   "datasets": [
     {
-      "href": "https://koumoul.com/s/data-fair/api/v1/datasets/geo-rpls2017",
-      "title": "Répertoire des logements locatifs des bailleurs sociaux",
-      "page": "https://koumoul.com/s/data-fair/dataset/geo-rpls2017/description"
+      "owner": {
+        "type": "organization",
+        "id": "5a5dc47163ebd4a6f438589b",
+        "name": "Koumoul",
+        "department": "marketing",
+        "departmentName": "Présentation de la plateforme"
+      },
+      "updatedAt": "2025-04-30T14:42:12.755Z",
+      "createdAt": "2018-11-22T08:57:10.515Z",
+      "updatedBy": {
+        "id": "rJytCgDTf",
+        "name": "Balam Saldana"
+      },
+      "createdBy": {
+        "id": "rJytCgDTf",
+        "name": "Balam Saldana"
+      },
+      "schema": [
+        {
+          "key": "sexe",
+          "type": "integer",
+          "x-originalName": "sexe",
+          "x-cardinality": 2,
+          "x-refersTo": null,
+          "title": "Sexe",
+          "enum": [
+            2,
+            1
+          ],
+          "description": ""
+        },
+        {
+          "key": "preusuel",
+          "type": "string",
+          "x-originalName": "preusuel",
+          "x-cardinality": 37053,
+          "x-refersTo": null,
+          "title": "Prénom usuel",
+          "x-capabilities": {
+            "textAgg": true
+          },
+          "description": ""
+        },
+        {
+          "key": "annais",
+          "type": "string",
+          "x-originalName": "annais",
+          "x-cardinality": 124,
+          "x-refersTo": null,
+          "title": "Année de naissance",
+          "x-capabilities": {
+            "textAgg": true
+          },
+          "description": ""
+        },
+        {
+          "key": "nombre",
+          "type": "integer",
+          "x-originalName": "nombre",
+          "x-cardinality": 7308,
+          "x-refersTo": null,
+          "title": "Nombre de naissances",
+          "description": ""
+        },
+        {
+          "x-calculated": true,
+          "key": "_id",
+          "type": "string",
+          "format": "uri-reference",
+          "title": "Identifiant",
+          "description": "Identifiant unique parmi toutes les lignes du jeu de données"
+        },
+        {
+          "x-calculated": true,
+          "key": "_i",
+          "type": "integer",
+          "title": "Numéro de ligne",
+          "description": "Indice de la ligne dans le fichier d'origine"
+        },
+        {
+          "x-calculated": true,
+          "key": "_rand",
+          "type": "integer",
+          "title": "Nombre aléatoire",
+          "description": "Un nombre aléatoire associé à la ligne qui permet d'obtenir un tri aléatoire par exemple"
+        }
+      ],
+      "id": "prenom-france-1900-2017",
+      "title": "Prénoms attribués aux enfants nés en France entre 1900 et 2022",
+      "originalFile": {
+        "name": "nat2022.csv",
+        "size": 12776531,
+        "mimetype": "text/csv",
+        "md5": "1c7142d50d586049e955e031e324eef7",
+        "encoding": "UTF-8"
+      },
+      "status": "finalized",
+      "file": {
+        "name": "nat2022.csv",
+        "size": 12776531,
+        "mimetype": "text/csv",
+        "md5": "1c7142d50d586049e955e031e324eef7",
+        "encoding": "UTF-8",
+        "schema": [
+          {
+            "key": "sexe",
+            "x-originalName": "sexe",
+            "type": "integer"
+          },
+          {
+            "key": "preusuel",
+            "x-originalName": "preusuel",
+            "type": "string"
+          },
+          {
+            "key": "annais",
+            "x-originalName": "annais",
+            "type": "string"
+          },
+          {
+            "key": "nombre",
+            "x-originalName": "nombre",
+            "type": "integer"
+          }
+        ],
+        "props": {
+          "linesDelimiter": "\r\n",
+          "fieldsDelimiter": ";",
+          "escapeChar": "\"",
+          "quote": "\""
+        }
+      },
+      "count": 703007,
+      "finalizedAt": "2025-04-30T14:42:12.756Z",
+      "description": "Le fichier des prénoms est établi à partir des seuls bulletins de naissance des personnes nées en France (métropole et départements d’outre-mer hors Mayotte). En conséquence, l’exhaustivité n’est pas garantie sur toute la période, notamment pour les années antérieures à 1946. Les utilisateurs pourront donc constater des écarts avec le nombre annuel des naissances évalué par l'Insee. Ces écarts, importants en début de période, vont en s’amenuisant. Après 1946, ils sont peu significatifs.\n\nLes informations contenues dans le fichier des prénoms sont basées sur les bulletins d'état-civil transmis à l’Insee par les officiers d’état civil des communes. Ces bulletins sont eux-mêmes établis à partir des déclarations des parents. L'Insee ne peut garantir que le fichier des prénoms soit exempt d'omissions ou d'erreurs.\n\nPour chaque prénom, il est indiqué pour chaque année de naissance (de 1900 à 2022) et chaque sexe, le nombre de personnes inscrites à l'état civil sous ce prénom. Une présentation générale de la [source état civil](https://www.insee.fr/fr/metadonnees/source/s1170) est accessible dans la rubrique « Définitions, méthodes et qualité » du site insee.fr.",
+      "extras": {
+        "reuses": [
+          "chronologie-des-prenoms-feminins-les-plus-donnes",
+          "chronologie-des-prenoms-masculins-les-plus-donnes",
+          "evolution-des-prenoms-a-la-naissance-en-france-de-1900-a-2107",
+          "prenom-par-annee",
+          "prenom-en-france-en-2017",
+          "nombre-de-prenoms-differents-par-annee",
+          "les-10-prenoms-les-plus-donnes"
+        ],
+        "externalReuses": [],
+        "applications": [
+          {
+            "updatedAt": "2025-01-09T13:35:43.511Z",
+            "id": "chronologie-des-prenoms-feminins-les-plus-donnes",
+            "publicationSites": [
+              "data-fair-portals:5IbdDs7l4",
+              "data-fair-portals:8286a7e5-a6f9-490b-996c-94e81a0e8e84"
+            ],
+            "slug": "chronologie-des-prenoms-feminins-les-plus-donnes"
+          },
+          {
+            "updatedAt": "2025-01-09T13:34:12.224Z",
+            "id": "chronologie-des-prenoms-masculins-les-plus-donnes",
+            "publicationSites": [
+              "data-fair-portals:5IbdDs7l4",
+              "data-fair-portals:8286a7e5-a6f9-490b-996c-94e81a0e8e84"
+            ],
+            "slug": "chronologie-des-prenoms-masculins-les-plus-donnes"
+          },
+          {
+            "updatedAt": "2025-01-09T13:35:03.532Z",
+            "id": "evolution-des-prenoms-a-la-naissance-en-france-de-1900-a-2107",
+            "publicationSites": [
+              "data-fair-portals:5IbdDs7l4",
+              "data-fair-portals:8286a7e5-a6f9-490b-996c-94e81a0e8e84"
+            ],
+            "slug": "evolution-des-prenoms-a-la-naissance-en-france-de-1900-a-2107"
+          },
+          {
+            "updatedAt": "2023-10-10T12:06:01.696Z",
+            "id": "prenom-par-annee",
+            "publicationSites": [
+              "data-fair-portals:5IbdDs7l4",
+              "data-fair-portals:8286a7e5-a6f9-490b-996c-94e81a0e8e84"
+            ],
+            "slug": "prenom-par-annee"
+          },
+          {
+            "updatedAt": "2023-10-10T12:06:22.653Z",
+            "id": "prenom-en-france-en-2017",
+            "publicationSites": [
+              "data-fair-portals:5IbdDs7l4",
+              "data-fair-portals:8286a7e5-a6f9-490b-996c-94e81a0e8e84"
+            ],
+            "slug": "prenom-en-france-en-2017"
+          },
+          {
+            "updatedAt": "2025-01-09T13:36:21.453Z",
+            "id": "nombre-de-prenoms-differents-par-annee",
+            "publicationSites": [
+              "data-fair-portals:5IbdDs7l4",
+              "data-fair-portals:8286a7e5-a6f9-490b-996c-94e81a0e8e84"
+            ],
+            "slug": "nombre-de-prenoms-differents-par-annee"
+          },
+          {
+            "updatedAt": "2024-05-30T08:06:37.651Z",
+            "id": "les-10-prenoms-les-plus-donnes",
+            "publicationSites": [
+              "data-fair-portals:5IbdDs7l4",
+              "data-fair-portals:8286a7e5-a6f9-490b-996c-94e81a0e8e84"
+            ],
+            "slug": "les-10-prenoms-les-plus-donnes"
+          }
+        ]
+      },
+      "origin": "https://www.data.gouv.fr/fr/datasets/ficher-des-prenoms-de-1900-a-2017/",
+      "license": {
+        "title": "Licence Ouverte / Open Licence",
+        "href": "https://www.etalab.gouv.fr/licence-ouverte-open-licence"
+      },
+      "publications": [],
+      "storage": {
+        "size": 12776531,
+        "dataFiles": [
+          {
+            "name": "nat2022.csv",
+            "key": "original",
+            "title": "Fichier d'origine",
+            "mimetype": "text/csv",
+            "size": 12776531,
+            "updatedAt": "2025-01-09T13:25:12.973Z"
+          }
+        ],
+        "indexed": {
+          "size": 12776531,
+          "parts": [
+            "original-file"
+          ]
+        },
+        "attachments": {
+          "size": 0,
+          "count": 0
+        },
+        "metadataAttachments": {
+          "size": 0,
+          "count": 0
+        },
+        "masterData": {
+          "size": 0,
+          "count": 0
+        }
+      },
+      "topics": [
+        {
+          "title": "Société",
+          "color": "#E91E63FF",
+          "id": "m3CnrYBSi",
+          "icon": {
+            "name": "home-group"
+          }
+        }
+      ],
+      "publicationSites": [
+        "data-fair-portals:5IbdDs7l4",
+        "data-fair-portals:8286a7e5-a6f9-490b-996c-94e81a0e8e84"
+      ],
+      "dataUpdatedAt": "2025-01-09T13:25:14.546Z",
+      "dataUpdatedBy": {
+        "id": "rJytCgDTf",
+        "name": "Balam Saldana"
+      },
+      "analysis": {
+        "escapeKeyAlgorithm": "legacy"
+      },
+      "requestedPublicationSites": [],
+      "slug": "prenom-france-1900-2017",
+      "masterData": {
+        "standardSchema": {},
+        "virtualDatasets": {
+          "active": false
+        },
+        "singleSearchs": [],
+        "bulkSearchs": []
+      },
+      "userPermissions": [
+        "list",
+        "readDescription",
+        "readSchema",
+        "readSafeSchema",
+        "readLines",
+        "getGeoAgg",
+        "getValuesAgg",
+        "getValues",
+        "getMetricAgg",
+        "getSimpleMetricsAgg",
+        "getWordsAgg",
+        "getMinAgg",
+        "getMaxAgg",
+        "downloadOriginalData",
+        "downloadFullData",
+        "readApiDoc",
+        "realtime-transactions",
+        "readLine",
+        "readLineRevisions",
+        "readRevisions",
+        "bulkSearch",
+        "listDataFiles",
+        "downloadDataFile",
+        "downloadMetadataAttachment",
+        "downloadAttachment",
+        "getReadApiKey",
+        "readCompatODSRecords"
+      ],
+      "public": true,
+      "visibility": "public",
+      "previews": [
+        {
+          "id": "table",
+          "title": "Tableau",
+          "href": "http://localhost:5888/data-fair/embed/dataset/prenom-france-1900-2017/table"
+        }
+      ],
+      "href": "http://localhost:5888/data-fair/api/v1/datasets/prenom-france-1900-2017",
+      "page": "http://localhost:5888/data-fair/dataset/prenom-france-1900-2017"
     }
   ]
 }
