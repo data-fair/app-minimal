@@ -1,6 +1,6 @@
 {
   "name": "data-fair-minimal",
-  "version": "0.2.0",
+  "version": "1.0.0",
   "description": "This is the smallest valid data-fair application.",
   "main": "index.js",
   "scripts": {
