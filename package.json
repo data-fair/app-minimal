@@ -1,5 +1,5 @@
 {
-  "name": "data-fair-minimal",
+  "name": "@data-fair/app-minimal",
   "version": "1.0.0",
   "description": "This is the smallest valid data-fair application.",
   "main": "index.js",
