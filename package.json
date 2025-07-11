@@ -6,7 +6,8 @@
   "scripts": {
     "dev": "zellij --layout .zellij.kdl",
     "dev-server": "df-dev-server",
-    "dev-app": "http-server src --port=3000 --cors --silent"
+    "dev-app": "http-server src --port=3000 --cors --silent",
+    "prepublishOnly": "./build.sh"
   },
   "repository": {
     "type": "git",
