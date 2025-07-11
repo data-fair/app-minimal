@@ -9,6 +9,7 @@
     "dev-app": "http-server src --port=3000 --cors --silent",
     "prepublishOnly": "./build.sh"
   },
+  "files": ["dist/*"],
   "repository": {
     "type": "git",
     "url": "git+https://github.com/koumoul-dev/data-fair-minimal.git"
